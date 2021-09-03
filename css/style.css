@@ -1,0 +1,102 @@
+.pixel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+h1 {
+    margin-bottom: 40px;
+}
+
+.pixel-hide {
+    display: none !important;
+}
+
+.pixel-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    width: 100%;
+}
+
+.pixel-form-input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.pixel-form-input {
+    display: flex;
+    width: 100%;
+}
+
+.pixel-form-input input {
+    display: flex;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 100%;
+}
+
+.pixel-form-input-label {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.pixel-form-button-container {
+    display: flex;
+    width: 100%
+}
+
+.pixel-button {
+    height: 40px;
+    border-radius: 5px;
+    background-color:#00bcd494;
+    color: black;
+    text-align: center;
+    min-width: 100px;
+    border: 1px solid #00bcd494;
+}
+
+.pixel-registration-message {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 500px;
+    width: 100%;
+}
+p{
+    margin-top: 0px;
+}
+
+.pixel-result-input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    
+}
+
+.pixel-result-input {
+    display: flex;
+    height: 40px;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.pixel-result-button-container {
+    display: flex;
+}
+
+.pixel-validate-button {
+    height: 40px;
+    border-radius: 5px;
+    background-color:#00bcd494;
+    color: black;
+    text-align: center;
+    min-width: 100px;
+    border: 1px solid #00bcd494;
+}

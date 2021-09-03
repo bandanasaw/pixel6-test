@@ -1,0 +1,23 @@
+{
+  "name": "kanban",
+  "version": "1.0.0",
+  "description": "Bandana first kanban prject on plain javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bandanasaw/kanban.git"
+  },
+  "author": "Bandana Saw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bandanasaw/kanban/issues"
+  },
+  "homepage": "https://github.com/bandanasaw/kanban#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

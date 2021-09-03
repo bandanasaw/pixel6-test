@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+          href="./css/style.css" />
+    <title>User Registration Form</title>
+</head>
+
+<body class=''>
+
+    <div class='pixel-container'>
+
+        <form id="pixelUserRegitrationForm"
+              class='pixel-form'>
+            <h1>User Registration Form</h1>
+            <div class='pixel-form-input-container'>
+
+                <label for='fullName'
+                       class='pixel-form-input-label'>Full Name:</label>
+                <div class='pixel-form-input'>
+                    <input class="pixel-fullname"
+                           id='fullName'
+                           type='text'
+                           placeholder="Please enter full name"
+                           name="fullname">
+                </div>
+            </div>
+            <div class='pixel-form-input-container'>
+
+                <label for='email'
+                       class='pixel-form-input-label'>E-Mail:</label>
+                <div class='pixel-form-input'>
+                    <input class="pixel-email"
+                           id='email'
+                           type='email'
+                           placeholder="Please enter email"
+                           name="email">
+                </div>
+            </div>
+            <div class='pixel-form-input-container'>
+
+                <label for='phoneNumber'
+                       class='pixel-form-input-label'>Phone Number:</label>
+                <div class='pixel-form-input'>
+                    <input class="pixel-phoneNumber"
+                           id='phoneNumber'
+                           placeholder="Please enter phone number"
+                           type="number"
+                           name="phonenumber">
+                </div>
+            </div>
+
+            <div class="pixel-form-button-container">
+                <button class="pixel-button"
+                        type='button'
+                        id="submit-btn">Submit</button>
+            </div>
+        </form>
+
+        <div class='pixel-registration-message pixel-hide'
+             id='pixelMessage'>
+
+             <h1>Validate User</h1>
+            <p>Dear <span id='userName'></span>,</p>
+            <p> Thank you for your inquiry. A 4 digit verification number has been sent to your phone number: <span
+                      id='userPhoneNumber'></span>,
+                please enter in the following box and submit for confirmation:</p>
+
+            <div class="pixel-result-input-container">
+                <div class='pixel-form-input-container'>
+
+                    <!-- <label for='otp'
+                           class='pixel-form-input-label'>Phone Number:</label> -->
+                    <div class='pixel-form-input'>
+                        <input class="pixel-phoneNumber"
+                               id='otp'
+                               placeholder="Please enter OTP"
+                               type="number"
+                               name="phonenumber">
+                    </div>
+                </div>
+                <div class="pixel-result-button-container">
+                    <button class="pixel-validate-button"
+                            type='button'
+                            id="validate-btn">Validate</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <script type="module"
+            src="index.js"></script>
+</body>
+
+</html>
