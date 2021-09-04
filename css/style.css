@@ -91,6 +91,14 @@ p{
     display: flex;
 }
 
+.pixel-image {
+    width: 54px;
+    height: 35px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
 .pixel-validate-button {
     height: 40px;
     border-radius: 5px;
@@ -99,4 +107,12 @@ p{
     text-align: center;
     min-width: 100px;
     border: 1px solid #00bcd494;
+}
+.pixel-message-validate{
+    margin-top: 10px;
+}
+
+.pixel-input-error{
+    margin-top: 5px;
+    color: red;
 }
