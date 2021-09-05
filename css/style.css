@@ -30,6 +30,7 @@ h1 {
 .pixel-form-input {
     display: flex;
     width: 100%;
+    position: relative;
 }
 
 .pixel-form-input input {
@@ -53,7 +54,7 @@ h1 {
 .pixel-button {
     height: 40px;
     border-radius: 5px;
-    background-color:#00bcd494;
+    background-color: #00bcd494;
     color: black;
     text-align: center;
     min-width: 100px;
@@ -68,7 +69,8 @@ h1 {
     max-width: 500px;
     width: 100%;
 }
-p{
+
+p {
     margin-top: 0px;
 }
 
@@ -76,19 +78,23 @@ p{
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-    
-}
 
-.pixel-result-input {
-    display: flex;
-    height: 40px;
-    border-radius: 5px;
-    width: 100%;
-    margin-bottom: 15px;
 }
 
 .pixel-result-button-container {
     display: flex;
+}
+
+.pixel-spacer {
+    flex: 1 0 auto;
+}
+
+.pixel-phone-msg-section {
+    display: flex;
+}
+
+.pixel-state-info {
+    align-self: flex-end;
 }
 
 .pixel-image {
@@ -99,20 +105,35 @@ p{
     top: 5px;
 }
 
+.pixel-provider {
+    /* width: 54px; */
+    height: 43px;
+    /* margin-right: -59px;
+    margin-left: 5px; */
+}
+
 .pixel-validate-button {
     height: 40px;
     border-radius: 5px;
-    background-color:#00bcd494;
+    background-color: #00bcd494;
     color: black;
     text-align: center;
     min-width: 100px;
     border: 1px solid #00bcd494;
 }
-.pixel-message-validate{
-    margin-top: 10px;
+
+.pixel-message-green {
+
+    color: green;
+
 }
 
-.pixel-input-error{
+.pixel-red {
+    margin-top: 10px;
+    color: red;
+}
+
+.pixel-input-error {
     margin-top: 5px;
     color: red;
 }

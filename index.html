@@ -12,7 +12,7 @@
     <title>User inquiry Form</title>
 </head>
 
-<body class=''>
+<body>
 
     <div class='pixel-container'>
 
@@ -54,15 +54,27 @@
 
                 <label for='phoneNumber'
                        class='pixel-form-input-label'>Phone Number:</label>
-                <div class='pixel-form-input' style='position: relative;'>
+                <div class='pixel-form-input'>
                     <input class="pixel-phoneNumber"
                            id='phoneNumber'
                            required
                            placeholder="Please enter phone number"
                            type="text"
                            name="phonenumber">
-                           <img class='pixel-image pixel-hide' src=''>
+
+                    <img class='pixel-image pixel-hide'
+                         src=''>
+
                 </div>
+
+                <div class='pixel-phone-msg-section'>
+                    <span id='phoneError'
+                          class='pixel-input-error pixel-hide'> Phone Number is not Valid.</span>
+                    <span class='pixel-spacer'></span>
+                    <span id='state'
+                          class='pixel-state-info'></span>
+                </div>
+
             </div>
 
             <div class="pixel-form-button-container">
@@ -74,7 +86,7 @@
 
         </form>
 
-        <!--User OTP Validation section-->
+        <!--User OTP Verification section-->
         <div class='pixel-registration-message pixel-hide'
              id='pixelMessage'>
 
@@ -95,9 +107,9 @@
                                maxlength="4"
                                size='4'
                                name="otpnumber" />
-                              
+
                     </div>
-                    
+
                 </div>
 
                 <div class="pixel-result-button-container">
@@ -108,18 +120,15 @@
 
             </div>
             <div id="getvalidateMessage"
-                 class="pixel-message-validate"></div>
+                 class="pixel-message-green"></div>
 
         </div>
     </div>
 
 
-
-
-
-
     <script type="module"
             src="index.js"></script>
+
 </body>
 
 </html>
