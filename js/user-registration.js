@@ -7,6 +7,7 @@ export class PixelUserRegistration {
     stateInfo = new PixelStateInfo();
     state;
     provider;
+    invalidPhone;
 
     constructor() {
         // attaching event on construtor call. 
@@ -23,6 +24,7 @@ export class PixelUserRegistration {
         document.querySelector('#phoneNumber').addEventListener('input', (e) => this.formatPhoneNumber(e));
         document.querySelector('#phoneNumber').addEventListener('focusout', (e) => this.validatePhone(e));
         document.querySelector('#validate-btn').addEventListener("click", () => this.validateOtp());
+        document.querySelector('#otp').addEventListener('input', (e) => this.allowOnlyNumbers(e))
     }
 
 
@@ -31,7 +33,7 @@ export class PixelUserRegistration {
         let form = document.querySelector('#pixelUserRegitrationForm');
 
         // check if form is valid if not valid do not go further
-        if (!form.checkValidity()) {
+        if (!form.checkValidity() || this.invalidPhone) {
             return;
         }
 
@@ -42,7 +44,8 @@ export class PixelUserRegistration {
 
 
 
-        let otpNumber = Math.floor(Math.random() * 10000) + ''; // Generate the 4 digit random number
+        // to avoid 2 digit number adding 10000 and doing substring 4 digit
+        let otpNumber = (Math.floor(Math.random() * 10000) + 10000).toString().substr(0, 4); // Generate the 4 digit random number
         this.otp = otpNumber;
 
         this.displayMessage(name.value, phoneNumber.value);
@@ -81,7 +84,7 @@ export class PixelUserRegistration {
         }
 
         // show valid invalid message
-        isValid ? phone.classList.add('pixel-hide') : phone.classList.remove('pixel-hide')
+        isValid && !this.invalidPhone ? phone.classList.add('pixel-hide') : phone.classList.remove('pixel-hide')
     }
 
     // Validate name 
@@ -150,6 +153,12 @@ export class PixelUserRegistration {
         event.target.value = val.replace(/[^a-zA-Z\s]+/g, '').replace(/\s\s+/g, ' ');
     }
 
+    // Allow only alphabets and space and remove other char input
+    allowOnlyNumbers(event) {
+        let val = event.target.value
+        event.target.value = val.replace(/[^0-9]/g, '');
+    }
+
     // formate phone number
     formatPhoneNumber(e) {
         let val = e.target.value;
@@ -179,6 +188,7 @@ export class PixelUserRegistration {
 
     // update provider image and state
     updateProvider(phone, state) {
+        this.invalidPhone = true;
         const img = document.querySelector('img');
         img.classList.add('pixel-hide');
         if (phone && phone.length >= 3) {
@@ -188,23 +198,26 @@ export class PixelUserRegistration {
                 img.src = './image/jio.jpg';
                 img.classList.remove('pixel-hide');
                 this.provider = 'Jio';
+                this.invalidPhone = false;
             }
 
             if (code >= 801 && code <= 920) {
                 img.src = './image/idea.jpg';
                 img.classList.remove('pixel-hide');
                 this.provider = 'Idea';
+                this.invalidPhone = false;
             }
 
             if (code >= 921 && code <= 999) {
                 img.src = './image/vodafone.jpg';
                 img.classList.remove('pixel-hide');
                 this.provider = 'Vodafone';
+                this.invalidPhone = false;
             }
 
         }
 
-        this.state = state.length === 3 && this.stateInfo.getState(parseInt(state));
+        this.state = !this.invalidPhone && state.length === 3 && this.stateInfo.getState(parseInt(state));
         document.querySelector('#state').innerHTML = this.state || '';
     }
 

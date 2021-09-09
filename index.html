@@ -42,6 +42,7 @@
                 <div class='pixel-form-input'>
                     <input class="pixel-email"
                            id='email'
+                           pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
                            type='email'
                            required
                            placeholder="Please enter email"
@@ -103,9 +104,8 @@
                         <input class="pixel-phoneNumber"
                                id='otp'
                                placeholder="Please enter OTP"
-                               type="number"
+                               type="text"
                                maxlength="4"
-                               size='4'
                                name="otpnumber" />
 
                     </div>
