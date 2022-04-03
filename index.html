@@ -3,12 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible"
-          content="IE=edge">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-          href="./css/style.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css" />
     <title>User inquiry Form</title>
 </head>
 
@@ -17,117 +14,82 @@
     <div class='pixel-container'>
 
         <!-- User Inquiry form-->
-        <form id="pixelUserRegitrationForm"
-              class='pixel-form'>
+        <form id="pixelUserRegitrationForm" class='pixel-form'>
             <h1>User Inquiry Form</h1>
             <div class='pixel-form-input-container'>
 
-                <label for='fullName'
-                       class='pixel-form-input-label'>Full Name:</label>
+                <label for='fullName' class='pixel-form-input-label'>Full Name:</label>
                 <div class='pixel-form-input'>
-                    <input class="pixel-fullname"
-                           id='fullName'
-                           type='text'
-                           required
-                           placeholder="Please enter full name"
-                           name="fullname">
+                    <input class="pixel-fullname" id='fullName' type='text' required
+                        placeholder="Please enter full name" name="fullname">
                 </div>
-                <span id='nameError'
-                      class='pixel-input-error pixel-hide'> User name is not Valid.</span>
+                <span id='nameError' class='pixel-input-error pixel-hide'> User name is not Valid.</span>
             </div>
             <div class='pixel-form-input-container'>
 
-                <label for='email'
-                       class='pixel-form-input-label'>E-Mail:</label>
+                <label for='email' class='pixel-form-input-label'>E-Mail:</label>
                 <div class='pixel-form-input'>
-                    <input class="pixel-email"
-                           id='email'
-                           pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-                           type='email'
-                           required
-                           placeholder="Please enter email"
-                           name="email">
+                    <input class="pixel-email" id='email' pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" type='email'
+                        required placeholder="Please enter email" name="email">
                 </div>
-                <span id='emailError'
-                      class='pixel-input-error pixel-hide'> Email is not Valid.</span>
+                <span id='emailError' class='pixel-input-error pixel-hide'> Email is not Valid.</span>
             </div>
             <div class='pixel-form-input-container'>
 
-                <label for='phoneNumber'
-                       class='pixel-form-input-label'>Phone Number:</label>
+                <label for='phoneNumber' class='pixel-form-input-label'>Phone Number:</label>
                 <div class='pixel-form-input'>
-                    <input class="pixel-phoneNumber"
-                           id='phoneNumber'
-                           required
-                           placeholder="Please enter phone number"
-                           type="text"
-                           name="phonenumber">
+                    <input class="pixel-phoneNumber" id='phoneNumber' required placeholder="Please enter phone number"
+                        type="text" name="phonenumber">
 
-                    <img class='pixel-image pixel-hide'
-                         src=''>
+                    <img class='pixel-image pixel-hide' src=''>
 
                 </div>
 
                 <div class='pixel-phone-msg-section'>
-                    <span id='phoneError'
-                          class='pixel-input-error pixel-hide'> Phone Number is not Valid.</span>
+                    <span id='phoneError' class='pixel-input-error pixel-hide'> Phone Number is not Valid.</span>
                     <span class='pixel-spacer'></span>
-                    <span id='state'
-                          class='pixel-state-info'></span>
+                    <span id='state' class='pixel-state-info'></span>
                 </div>
 
             </div>
 
             <div class="pixel-form-button-container">
-                <button class="pixel-button"
-                        type='button'
-                        value="Submit"
-                        id="submit-btn">Submit</button>
+                <button class="pixel-button" type='button' value="Submit" id="submit-btn">Submit</button>
             </div>
 
         </form>
 
         <!--User OTP Verification section-->
-        <div class='pixel-registration-message pixel-hide'
-             id='pixelMessage'>
+        <div class='pixel-registration-message pixel-hide' id='pixelMessage'>
 
             <h1>OTP Verification</h1>
             <p>Dear <span id='userName'></span>,</p>
             <p> Thank you for your inquiry. A 4 digit verification number has been sent to your phone number: <span
-                      id='userPhoneNumber'></span>,
+                    id='userPhoneNumber'></span>,
                 please enter in the following box and submit for confirmation:</p>
 
-            <div class="pixel-result-input-container"
-                 id='otpValidationForm'>
+            <div class="pixel-result-input-container" id='otpValidationForm'>
                 <div class='pixel-form-input-container'>
                     <div class='pixel-form-input'>
-                        <input class="pixel-phoneNumber"
-                               id='otp'
-                               placeholder="Please enter OTP"
-                               type="text"
-                               maxlength="4"
-                               name="otpnumber" />
+                        <input class="pixel-phoneNumber" id='otp' placeholder="Please enter OTP" type="text"
+                            maxlength="4" name="otpnumber" />
 
                     </div>
 
                 </div>
 
                 <div class="pixel-result-button-container">
-                    <button class="pixel-validate-button"
-                            type='button'
-                            id="validate-btn">Validate</button>
+                    <button class="pixel-validate-button" type='button' id="validate-btn">Validate</button>
                 </div>
 
             </div>
-            <div id="getvalidateMessage"
-                 class="pixel-message-green"></div>
+            <div id="getvalidateMessage" class="pixel-message-green"></div>
 
         </div>
     </div>
 
 
-    <script type="module"
-            src="index.js"></script>
+    <script type="module" src="index.js"></script>
 
 </body>
 

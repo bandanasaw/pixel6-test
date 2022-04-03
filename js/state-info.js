@@ -43,7 +43,8 @@ export class PixelStateInfo {
             case (num > 891 && num < 918): return 'Uttarakhand';
             case (num > 918 && num <= 999): return 'West Bengal';
             default:
-                return 'Invalid number'
+                return 'Invalid number';
+                
         }
     }
 
