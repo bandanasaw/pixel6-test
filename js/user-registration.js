@@ -1,4 +1,3 @@
-
 import { PixelStateInfo } from './state-info.js';
 export class PixelUserRegistration {
 
@@ -52,7 +51,7 @@ export class PixelUserRegistration {
 
         // show the opt number after 2 sec on alert popup. to mimick message.
         setTimeout(() => {
-            alert(`your OTP is ${otpNumber}`);
+            console.log(`your OTP is ${otpNumber}`);
         }, 2000);
 
     }
